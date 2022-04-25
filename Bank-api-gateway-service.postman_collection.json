@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "58072948-ec51-4d75-978d-3034bbb7fa9f",
+		"_postman_id": "df36f1bf-a151-4ba9-b474-4844ddaf5acb",
 		"name": "Bank-api-gateway-service",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -50,6 +50,15 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "localhost:8080/account/1",
 							"host": [
@@ -1022,6 +1031,25 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/movementCredit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movementCredit"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -1030,9 +1058,21 @@
 			"item": [
 				{
 					"name": "findAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "localhost:8080/product",
 							"host": [
@@ -1089,6 +1129,15 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "localhost:8080/product/3",
 							"host": [
