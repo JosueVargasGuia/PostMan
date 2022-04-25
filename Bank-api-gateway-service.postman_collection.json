@@ -1,0 +1,1443 @@
+{
+	"info": {
+		"_postman_id": "58072948-ec51-4d75-978d-3034bbb7fa9f",
+		"name": "Bank-api-gateway-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "account-service",
+			"item": [
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/account/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/account",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/account/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idAccount\":10,\r\n    \"idProduct\":2,\r\n    \"idCustomer\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/account",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idAccount\":2,\r\n    \"idProduct\": 2,\r\n    \"idCustomer\": 1,\r\n    \"amount\": 10.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/account",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idProduct\":3,\r\n    \"idCustomer\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/account/registerAccount",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account",
+								"registerAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultMovementsAccount",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/account/consultMovementsAccount/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account",
+								"consultMovementsAccount",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "configuration-service",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/configuration",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"configuration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/configuration/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"configuration",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idConfiguration\": 5,\r\n    \"costMaintenance\": 121.00,\r\n    \"quantityMovement\": null,\r\n    \"quantityCredit\": 1,\r\n    \"specificDate\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/configuration",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"configuration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/configuration/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"configuration",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"idConfiguration\": 28,\r\n        \"costMaintenance\": null,\r\n        \"quantityMovement\": null,\r\n        \"quantityCredit\": null,\r\n        \"specificDate\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/configuration",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"configuration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fillData-insert",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/configuration/fillData",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"configuration",
+								"fillData"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "credit-service",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/credit",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"credit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/credit/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"credit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultMovements/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/credit/consultMovements/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"credit",
+								"consultMovements",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/credit/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"credit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerAccountCredit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"idCredit\":1,\r\n    \"idProductCredit\":1,\r\n    \"idCustomer\":2,\r\n    \"idProducto\":4,\r\n    \"amountCreditLimit\":20.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/credit/registerAccountCredit",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"credit",
+								"registerAccountCredit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idProductCredit\":2,\r\n    \"idCustomer\":1,\r\n    \"idProducto\":1,\r\n    \"amountCreditLimit\":20.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/credit",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"credit"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "customer-service",
+			"item": [
+				{
+					"name": "insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"Javier\",\r\n    \"lastname\": \"Hoyle\",\r\n    \"documentNumber\": \"78676534\",\r\n    \"typeDocument\": \"dni\",\r\n    \"typeCustomer\": \"company\",\r\n    \"emailAddress\": \"javier@gmail.com\",\r\n    \"phoneNumber\": \"998765678\",\r\n    \"homeAddress\": \"San Borja 123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/customer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"firstname\": \"Jostin Samuel\",\r\n    \"lastname\": \"Martinez Alvarez\",\r\n    \"documentNumber\": \"60898432\",\r\n    \"typeDocument\": \"dni\",\r\n    \"typeCustomer\": \"personal\",\r\n    \"emailAddress\": \"jostinsamuel@gmail.com\",\r\n    \"phoneNumber\": \"941451121\",\r\n    \"homeAddress\": \"San Juan 123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/customer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/customer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/customer/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customer/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/holder-account",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"holder-account"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "holder-account-service",
+			"item": [
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/holder-account/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"holder-account",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/holder-account",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"holder-account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/holder-account/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"holder-account",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idHolderAccount\":10,\r\n    \"idCustomer\":1,\r\n    \"idAccount\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/holder-account",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"holder-account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerHolderAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCustomer\":2,\r\n    \"idAccount\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/holder-account/registerHolderAccount",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"holder-account",
+								"registerHolderAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idHolderAccount\":1,\r\n    \"idCustomer\":2,\r\n    \"idAccount\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/holder-account",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"holder-account"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "movement-account-service",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/movement-account",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movement-account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/movement-account/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movement-account",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/movement-account/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movement-account",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"idMovementAccount\":15,\r\n\"amount\":20.00,\r\n\"dateMovementAccount\":\"2020-06-12\",\r\n\"typeMovementAccount\":\"deposit\",\r\n\"idAccount\":2\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/movement-account",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movement-account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "recordAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\":120.00,\r\n    \"dateMovementAccount\":\"2022-04-20\",\r\n    \"typeMovementAccount\":\"withdrawal\",\r\n    \"idAccount\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/movement-account/recordAccount",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movement-account",
+								"recordAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "balanceInquiry",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idAccount\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/movement-account/balanceInquiry",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movement-account",
+								"balanceInquiry"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"idMovementAccount\":1,\r\n\"amount\":20.00,\r\n\"dateMovementAccount\":\"2020-06-12\",\r\n\"typeMovementAccount\":\"deposit\",\r\n\"idAccount\":1\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/movement-account",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movement-account"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "movementCredit-service",
+			"item": [
+				{
+					"name": "balanceInquiry",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idMovementCredit\":12,\r\n    \"amount\":10.00,\r\n    \"dateMovement\":null,\r\n    \"typeMovementCredit\":\"abono\",\r\n    \"idCredit\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/movementCredit/balanceInquiry",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movementCredit",
+								"balanceInquiry"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "recordsMovement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idMovementCredit\":29,\r\n    \"amount\":15,\r\n    \"dateMovement\":null,\r\n    \"typeMovementCredit\":\"cargo\",\r\n    \"idCredit\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/movementCredit/recordsMovement",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movementCredit",
+								"recordsMovement"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/movementCredit/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movementCredit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/movementCredit/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movementCredit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idMovementCredit\":4,\r\n    \"amount\":25.00,\r\n    \"dateMovement\":\"2022-04-15T21:58:53.968+00:00\",\r\n    \"typeMovementCredit\":\"cargo\",\r\n    \"idCredit\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/movementCredit",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movementCredit"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product-service",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/product",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/product/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fillData-insert",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/product/fillData",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"fillData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/product/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n \r\n        \"productId\": null,\r\n        \"descriptionProducto\": \"descriptionProducto\",\r\n        \"typeProduct\": \"activos\",\r\n        \"idConfiguration\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/product",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"idProducto\": 4,\r\n        \"descriptionProducto\": \"Plazo fijo11\",\r\n        \"typeProduct\": \"pasivos\",\r\n        \"idConfiguration\": 3\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/product",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SignCustAccount-service",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/signCustAccount",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"signCustAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/signCustAccount/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"signCustAccount",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/signCustAccount/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"signCustAccount",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerSignature",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCustomer\":1,\r\n    \"idAccount\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/signCustAccount/registerSignature",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"signCustAccount",
+								"registerSignature"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idSignCustAccount\":2,\r\n    \"idCustomer\":1,\r\n    \"idAccount\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/signCustAccount",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"signCustAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idSignCustAccount\":2,\r\n    \"idCustomer\":1,\r\n    \"idAccount\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/signCustAccount",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"signCustAccount"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TableId-service",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/tableid",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tableid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "start id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/tableid/generateKey/Product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tableid",
+								"generateKey",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/tableid/Product",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tableid",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nameTable\": \"Product\",\r\n        \"secuencia\": 7\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/tableid",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tableid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nameTable\": \"Product\",\r\n    \"secuencia\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/tableid",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tableid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generateKey",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/tableid/generateKey/Product",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tableid",
+								"generateKey",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
