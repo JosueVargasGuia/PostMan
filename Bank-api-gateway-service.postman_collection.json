@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "df36f1bf-a151-4ba9-b474-4844ddaf5acb",
+		"_postman_id": "bcf1ade7-8b75-4119-84b7-7aeaaf8691f6",
 		"name": "Bank-api-gateway-service",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -14,14 +14,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/account/2",
+							"raw": "localhost:8080/account/1",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"account",
-								"2"
+								"1"
 							]
 						}
 					},
@@ -29,9 +29,21 @@
 				},
 				{
 					"name": "findAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "localhost:8080/account",
 							"host": [
@@ -80,7 +92,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"idAccount\":10,\r\n    \"idProduct\":2,\r\n    \"idCustomer\":1\r\n}",
+							"raw": "{\r\n \"idAccount\": 1,\r\n    \"idCustomer\": 1,\r\n    \"typeOfCurrency\": \"euro\",\r\n    \"accountNumber\": null,\r\n    \"creationDate\": null,\r\n    \"dateModified\": null,\r\n    \"idBankAccount\": 12,\r\n    \"idProduct\": 4\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -107,7 +119,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"idAccount\":2,\r\n    \"idProduct\": 2,\r\n    \"idCustomer\": 1,\r\n    \"amount\": 10.0\r\n}",
+							"raw": "{\r\n    \"idAccount\": 4,\r\n    \"idCustomer\": 1,\r\n    \"typeOfCurrency\": \"euro\",\r\n    \"accountNumber\": null,\r\n    \"creationDate\": \"27/04/2022 21:04:45\",\r\n    \"dateModified\": \"27/04/2022 21:04:45\",\r\n    \"idBankAccount\": 4,\r\n    \"idProduct\": 4\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -134,7 +146,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"idProduct\":3,\r\n    \"idCustomer\":2\r\n}",
+							"raw": "{\r\n    \"idProduct\":2,\r\n    \"idCustomer\":1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -173,7 +185,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/account/consultMovementsAccount/1",
+							"raw": "localhost:8080/account/consultMovementsAccount/2",
 							"host": [
 								"localhost"
 							],
@@ -181,7 +193,475 @@
 							"path": [
 								"account",
 								"consultMovementsAccount",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "card-service",
+			"item": [
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/card/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"card",
 								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/card",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"card"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/card/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"card",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCard\": 4,\r\n    \"idAccount\": 1,\r\n    \"idSignCustAccount\": 1,\r\n    \"cardNumber\": null,\r\n    \"expirationDate\": null,\r\n    \"cvv\": null,\r\n    \"password\": null,\r\n    \"creationDate\": \"29/04/2022 01:52:36\",\r\n    \"dateModified\": null,\r\n    \"idHolderAccount\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/card",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"card"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerCard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idCard\": 1,\r\n    \"idHolderAccount\": 1,\r\n    \"idAccount\": 1,\r\n    \"idSignCustAccount\": 1\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/card/registerCard",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"card",
+								"registerCard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"idCard\": 4,\r\n        \"idAccount\": 1,\r\n        \"idSignCustAccount\": 1,\r\n        \"cardNumber\": null,\r\n        \"expirationDate\": null,\r\n        \"cvv\": null,\r\n        \"password\": null,\r\n        \"creationDate\": \"29/04/2022 01:52:48\",\r\n        \"dateModified\": null,\r\n        \"idHolderAccount\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/card",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"card"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bank-transfers-service",
+			"item": [
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/bank-transfer/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bank-transfer",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bank-transfer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bank-transfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bank-transfers/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bank-transfers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idBankTransfers\": 2,\r\n    \"originAccount\":  {\r\n            \"typeAccount\":\"BankAccounts\",\r\n            \"idAccount\":1,\r\n            \"idMovement\":1\r\n        },\r\n    \"targetAccount\": {\r\n            \"typeAccount\":\"CreditAccount\",\r\n            \"idAccount\":1,\r\n            \"idMovement\":1\r\n        },\r\n    \"typeTransfer\": null,\r\n    \"amount\": null,\r\n    \"accountNumber\": null,\r\n    \"operationDate\": null,\r\n    \"interbankAccountCode\": null,\r\n    \"creationDate\": \"29/04/2022 04:44:46\",\r\n    \"dateModified\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bank-transfer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bank-transfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idBankTransfers\": 2,\r\n    \"idBankAccount\": null,\r\n    \"idCreditAccount\": null,\r\n    \"typeTransfer\": null,\r\n    \"amount\": null,\r\n    \"accountNumber\": null,\r\n    \"operationDate\": null,\r\n    \"interbankAccountCode\": null,\r\n    \"creationDate\": \"29/04/2022 04:44:46\",\r\n    \"dateModified\": \"29/04/2022 04:44:46\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bank-transfer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bank-transfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "wireTransfer-bankingToBC",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"typeTransfer\": \"banking\",\r\n        \"originAccount\": {\r\n            \"typeAccount\":\"BankAccounts\",\r\n            \"idAccount\":1\r\n        },   \r\n        \"targetAccount\": {\r\n            \"typeAccount\":\"CreditAccount\",\r\n            \"idAccount\":3\r\n        },\r\n          \r\n        \"amount\": 5.0,\r\n        \"interbankAccountCode\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bank-transfer/wireTransfer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bank-transfer",
+								"wireTransfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "wireTransfer-bankingToCB",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"typeTransfer\": \"banking\",\r\n        \"originAccount\": {\r\n            \"typeAccount\":\"CreditAccount\",\r\n            \"idAccount\":3\r\n        },\r\n        \"targetAccount\": {\r\n            \"typeAccount\":\"BankAccounts\",\r\n            \"idAccount\":1\r\n        },      \r\n        \"amount\": 5.0,\r\n        \"interbankAccountCode\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bank-transfer/wireTransfer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bank-transfer",
+								"wireTransfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "wireTransfer-bankingToCC",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"typeTransfer\": \"banking\",\r\n        \"originAccount\": {\r\n            \"typeAccount\":\"CreditAccount\",\r\n            \"idAccount\":3\r\n        },   \r\n        \"targetAccount\": {\r\n            \"typeAccount\":\"CreditAccount\",\r\n            \"idAccount\":3\r\n        },\r\n          \r\n        \"amount\": 5.0,\r\n        \"interbankAccountCode\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bank-transfer/wireTransfer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bank-transfer",
+								"wireTransfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "wireTransfer-bankingToBB",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"typeTransfer\": \"banking\",\r\n        \"originAccount\": {\r\n            \"typeAccount\":\"BankAccounts\",\r\n            \"idAccount\":1\r\n        },   \r\n        \"targetAccount\": {\r\n            \"typeAccount\":\"BankAccounts\",\r\n            \"idAccount\":1\r\n        },\r\n          \r\n        \"amount\": 5.0,\r\n        \"interbankAccountCode\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bank-transfer/wireTransfer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bank-transfer",
+								"wireTransfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "wireTransfer-interbankToB",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"typeTransfer\": \"interbank\",\r\n        \"originAccount\": {\r\n            \"typeAccount\":\"BankAccounts\",\r\n            \"idAccount\":1\r\n        }, \r\n        \"amount\": 5.0,\r\n        \"interbankAccountCode\": \"999-999-999-9999\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bank-transfer/wireTransfer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bank-transfer",
+								"wireTransfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "wireTransfer-interbankToC",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"typeTransfer\": \"interbank\",\r\n        \"originAccount\": {\r\n            \"typeAccount\":\"CreditAccount\",\r\n            \"idAccount\":3\r\n        }, \r\n        \"amount\": 5.0,\r\n        \"interbankAccountCode\": \"999-999-999-9999\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bank-transfer/wireTransfer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bank-transfer",
+								"wireTransfer"
 							]
 						}
 					},
@@ -230,33 +710,6 @@
 					"response": []
 				},
 				{
-					"name": "update",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"idConfiguration\": 5,\r\n    \"costMaintenance\": 121.00,\r\n    \"quantityMovement\": null,\r\n    \"quantityCredit\": 1,\r\n    \"specificDate\": null\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:8080/configuration",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"configuration"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "delete",
 					"request": {
 						"method": "DELETE",
@@ -283,6 +736,33 @@
 						"body": {
 							"mode": "raw",
 							"raw": " {\r\n        \"idConfiguration\": 28,\r\n        \"costMaintenance\": null,\r\n        \"quantityMovement\": null,\r\n        \"quantityCredit\": null,\r\n        \"specificDate\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/configuration",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"configuration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"idConfiguration\": 4,\r\n        \"costMaintenance\": null,\r\n        \"quantityMovement\": 30,\r\n        \"specificDate\": null,\r\n        \"quantityCredit\": 1,\r\n        \"minOpeningAmount\": null,\r\n        \"minDayAverageAmount\": null,\r\n        \"transactionFee\": 5.00,\r\n        \"creationDate\": null,\r\n        \"dateModified\": null\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -369,7 +849,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/credit/consultMovements/1",
+							"raw": "localhost:8080/credit/consultMovements/2",
 							"host": [
 								"localhost"
 							],
@@ -377,7 +857,7 @@
 							"path": [
 								"credit",
 								"consultMovements",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -389,14 +869,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/credit/1",
+							"raw": "localhost:8080/credit/2",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"credit",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -409,7 +889,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{   \r\n    \"idCredit\":1,\r\n    \"idProductCredit\":1,\r\n    \"idCustomer\":2,\r\n    \"idProducto\":4,\r\n    \"amountCreditLimit\":20.00\r\n}",
+							"raw": "{\r\n    \"idProducto\": 4,    \r\n    \"idCustomer\": 2,\r\n    \"idAccount\": null,    \r\n    \"typeOfCurrency\": null,\r\n    \"accountNumber\": null,\r\n    \"creationDate\": null,\r\n    \"dateModified\": null,\r\n    \"idCreditAccount\": null,\r\n    \r\n    \"amountCreditLimit\": null\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -437,7 +917,34 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"idProductCredit\":2,\r\n    \"idCustomer\":1,\r\n    \"idProducto\":1,\r\n    \"amountCreditLimit\":20.00\r\n}",
+							"raw": "{\r\n    \"idCreditAccount\":2,\r\n    \"idProducto\":1, \r\n    \"amountCreditLimit\":20.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/credit",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"credit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCreditAccount\":2,\r\n    \"idProducto\":1, \r\n    \"amountCreditLimit\":20.00\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -462,6 +969,63 @@
 		{
 			"name": "customer-service",
 			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/customer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customer/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/customer/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
 				{
 					"name": "insert",
 					"request": {
@@ -496,7 +1060,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 1,\r\n    \"firstname\": \"Jostin Samuel\",\r\n    \"lastname\": \"Martinez Alvarez\",\r\n    \"documentNumber\": \"60898432\",\r\n    \"typeDocument\": \"dni\",\r\n    \"typeCustomer\": \"personal\",\r\n    \"emailAddress\": \"jostinsamuel@gmail.com\",\r\n    \"phoneNumber\": \"941451121\",\r\n    \"homeAddress\": \"San Juan 123\"\r\n}",
+							"raw": "{\r\n        \"idCustomer\": 2,\r\n        \"firstname\": \"Javier\",\r\n        \"lastname\": \"Hoyle\",\r\n        \"emailAddress\": \"javier@gmail.com\",\r\n        \"phoneNumber\": \"998765678\",\r\n        \"homeAddress\": \"San Borja 123\",\r\n        \"typeDocument\": \"dni\",\r\n        \"documentNumber\": \"78676534\",\r\n        \"typeCustomer\": \"personal\",\r\n        \"creationDate\": \"29/04/2022 02:06:18\",\r\n        \"dateModified\": \"29/04/2022 02:06:18\"\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -511,81 +1075,6 @@
 							"port": "8080",
 							"path": [
 								"customer"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "findAll",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:8080/customer",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"customer"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "localhost:8080/customer/3",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"customer",
-								"3"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "findById",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/customer/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"customer",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "findAll",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:8080/holder-account",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"holder-account"
 							]
 						}
 					},
@@ -782,14 +1271,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/movement-account/1",
+							"raw": "localhost:8080/movement-account/4",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"movement-account",
-								"1"
+								"4"
 							]
 						}
 					},
@@ -802,7 +1291,34 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"idMovementAccount\":15,\r\n\"amount\":20.00,\r\n\"dateMovementAccount\":\"2020-06-12\",\r\n\"typeMovementAccount\":\"deposit\",\r\n\"idAccount\":2\r\n\r\n}",
+							"raw": "{\r\n    \"idMovementAccount\": 1,\r\n    \"idBankAccount\": 1,\r\n    \"idCustomer\": 1,\r\n    \"amount\": 20.0,\r\n    \"dateMovementAccount\": null,\r\n    \"typeMovementAccount\": \"deposit\",\r\n    \"commissionForTransaction\": null,\r\n    \"creationDate\": \"27/04/2022 20:29:35\",\r\n    \"dateModified\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/movement-account",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movement-account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"idMovementAccount\": 3,\r\n        \"idBankAccount\": 1,\r\n        \"idCustomer\": 1,\r\n        \"amount\": 20.0,\r\n        \"dateMovementAccount\": \"27/04/2022 20:29:35\",\r\n        \"typeMovementAccount\": \"deposit\",\r\n        \"commissionForTransaction\": null,\r\n        \"creationDate\": \"27/04/2022 20:32:05\",\r\n        \"dateModified\": \"27/04/2022 20:32:05\"\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -829,7 +1345,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"amount\":120.00,\r\n    \"dateMovementAccount\":\"2022-04-20\",\r\n    \"typeMovementAccount\":\"withdrawal\",\r\n    \"idAccount\":1\r\n}",
+							"raw": "{\r\n    \"amount\":20.00,\r\n    \"dateMovementAccount\":\"20/04/2022 20:00:00\",\r\n    \"typeMovementAccount\":\"withdrawal\",\r\n    \"idBankAccount\":1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -857,7 +1373,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"idAccount\": 1\r\n}",
+							"raw": "{\r\n    \"idBankAccount\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -877,33 +1393,6 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "update",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n\"idMovementAccount\":1,\r\n\"amount\":20.00,\r\n\"dateMovementAccount\":\"2020-06-12\",\r\n\"typeMovementAccount\":\"deposit\",\r\n\"idAccount\":1\r\n\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:8080/movement-account",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"movement-account"
-							]
-						}
-					},
-					"response": []
 				}
 			]
 		},
@@ -911,56 +1400,19 @@
 			"name": "movementCredit-service",
 			"item": [
 				{
-					"name": "balanceInquiry",
+					"name": "getAll",
 					"request": {
-						"method": "POST",
+						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"idMovementCredit\":12,\r\n    \"amount\":10.00,\r\n    \"dateMovement\":null,\r\n    \"typeMovementCredit\":\"abono\",\r\n    \"idCredit\":1\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "localhost:8080/movementCredit/balanceInquiry",
+							"raw": "http://localhost:8080/movementCredit",
+							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"movementCredit",
-								"balanceInquiry"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "recordsMovement",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"idMovementCredit\":29,\r\n    \"amount\":15,\r\n    \"dateMovement\":null,\r\n    \"typeMovementCredit\":\"cargo\",\r\n    \"idCredit\":1\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:8080/movementCredit/recordsMovement",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"movementCredit",
-								"recordsMovement"
+								"movementCredit"
 							]
 						}
 					},
@@ -972,7 +1424,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/movementCredit/1",
+							"raw": "http://localhost:8080/movementCredit/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -980,7 +1432,7 @@
 							"port": "8080",
 							"path": [
 								"movementCredit",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -1012,7 +1464,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"idMovementCredit\":4,\r\n    \"amount\":25.00,\r\n    \"dateMovement\":\"2022-04-15T21:58:53.968+00:00\",\r\n    \"typeMovementCredit\":\"cargo\",\r\n    \"idCredit\":1\r\n}",
+							"raw": "{\r\n    \"idMovementCredit\": null,\r\n    \"idCreditAccount\": 1,\r\n    \"amount\": 25.0,\r\n    \"dateMovement\": null,\r\n    \"typeMovementCredit\": \"charge\",\r\n    \"commissionForTransaction\": 10.0,\r\n    \"creationDate\": null,\r\n    \"dateModified\": null\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1033,19 +1485,111 @@
 					"response": []
 				},
 				{
-					"name": "getAll",
+					"name": "update",
 					"request": {
-						"method": "GET",
+						"method": "PUT",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"idMovementCredit\": 3,\r\n        \"idCreditAccount\": 1,\r\n        \"amount\": 25.0,\r\n        \"dateMovement\": null,\r\n        \"typeMovementCredit\": \"charge\",\r\n        \"commissionForTransaction\": 10.0,\r\n        \"creationDate\": \"27/04/2022 20:11:47\",\r\n        \"dateModified\": \"27/04/2022 20:11:47\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:8080/movementCredit",
-							"protocol": "http",
+							"raw": "localhost:8080/movementCredit",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"movementCredit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "balanceInquiry",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \"idCreditAccount\": 1,\r\n    \"idAccount\": 5,\r\n    \"idCustomer\": null,\r\n    \"typeOfCurrency\": null,\r\n    \"accountNumber\": null,\r\n    \"creationDate\": \"27/04/2022 21:05:48\",\r\n    \"dateModified\": \"27/04/2022 21:05:48\",    \r\n    \"idProducto\": 1,\r\n    \"amountCreditLimit\": 20.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/movementCredit/balanceInquiry",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movementCredit",
+								"balanceInquiry"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "recordsMovement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idMovementCredit\": 1,\r\n    \"idCreditAccount\":3,\r\n    \"amount\": 2500.0,\r\n    \"dateMovement\": null,\r\n    \"typeMovementCredit\": \"payment\",\r\n    \r\n    \"creationDate\": null,\r\n    \"dateModified\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/movementCredit/recordsMovement",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movementCredit",
+								"recordsMovement"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "recordsMovement Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idMovementCredit\": 1,\r\n    \"idCreditAccount\":3,\r\n    \"amount\": 2500.0,\r\n    \"dateMovement\": null,\r\n    \"typeMovementCredit\": \"payment\",\r\n    \r\n    \"creationDate\": null,\r\n    \"dateModified\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/movementCredit/recordsMovement",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movementCredit",
+								"recordsMovement"
 							]
 						}
 					},
@@ -1092,14 +1636,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/product/1",
+							"raw": "localhost:8080/product/6",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"product",
-								"1"
+								"6"
 							]
 						}
 					},
@@ -1107,9 +1651,21 @@
 				},
 				{
 					"name": "fillData-insert",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "localhost:8080/product/fillData",
 							"host": [
@@ -1139,14 +1695,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/product/3",
+							"raw": "localhost:8080/product/8",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"product",
-								"3"
+								"8"
 							]
 						}
 					},
@@ -1186,7 +1742,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "  {\r\n        \"idProducto\": 4,\r\n        \"descriptionProducto\": \"Plazo fijo11\",\r\n        \"typeProduct\": \"pasivos\",\r\n        \"idConfiguration\": 3\r\n    }",
+							"raw": "{\r\n    \"idProducto\": 8,\r\n    \"descriptionProducto\": \"descriptionProducto\",\r\n    \"typeProduct\": \"activos\",\r\n    \"idConfiguration\": 1,\r\n    \"productId\": null,\r\n    \"creationDate\": \"27/04/2022 21:09:58\",\r\n    \"dateModified\": \"27/04/2022 21:09:58\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1446,7 +2002,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nameTable\": \"Product\",\r\n    \"secuencia\": 1\r\n}",
+							"raw": "  {\r\n        \"nameTable\": \"MovementAccount\",\r\n        \"secuencia\": 15\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
